@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #421D26;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 80px;
+  background-color: white;
+  border: 1px solid #c0c0c0;
+  border-radius : 5px;
+}
+
+.white.active {
+  background-color: #CCC;
+  
+}
+
+.black {
+  --width: 48px;
+  background-color: black;
+  border-radius : 5px;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
+
+.text {
+  font-family: "Open Sans Condensed", "Bahnschrift Condensed";
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.light {
+  color: white;
+}
